@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "mf.vscode-styled-components",
+        "burkeholland.simple-react-snippets",
+        "mrmlnc.vscode-scss",
+        "sibiraj-s.vscode-scss-formatter",
+        "gencer.html-slim-scss-css-class-completion",
+        "zignd.html-css-class-completion",
+        "styled-components.vscode-styled-components"
+    ]
+}
