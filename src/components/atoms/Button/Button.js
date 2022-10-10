@@ -19,9 +19,9 @@ const StyledButton = styled.button`
     }
 `;
 
-const Button = () => {
+const Button = (props) => {
     return (
-        <StyledButton>
+        <StyledButton {...props}>
             <DeleteIcon />
         </StyledButton>
     )

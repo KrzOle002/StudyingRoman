@@ -23,8 +23,8 @@ const UserList = () => {
     return (
         <Wraper>
             <StyledList>
-                {users.map((userData, key) => (
-                    <UserListItem userData={userData} key={key} />
+                {users.map((userData, i) => (
+                    <UserListItem index={i} userData={userData} key={userData.key} />
                 ))}
             </StyledList>
         </Wraper>

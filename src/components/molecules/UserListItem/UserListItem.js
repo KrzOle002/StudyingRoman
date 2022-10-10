@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Button from 'components/atoms/Button/Button';
 import { Wraper, StyledAverage, StyledInfo } from './UserListItem.style';
 
-const UserListItem = ({ userData: { average, name, attendance } }) => {
+const showIndex = (index) => alert(`Player nr ${index + 1}`);
+
+const UserListItem = ({ index, userData: { average, name, attendance } }) => {
     return (
         <Wraper>
             <StyledAverage checkAverage={average}>
@@ -13,7 +15,7 @@ const UserListItem = ({ userData: { average, name, attendance } }) => {
                 <p>{name}</p>
                 <p>attendance: {attendance}</p>
             </StyledInfo>
-            <Button />
+            <Button onClick={() => showIndex(index)} />
         </Wraper>
     )
 }
