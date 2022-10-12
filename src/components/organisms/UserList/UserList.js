@@ -7,7 +7,7 @@ const UserList = () => {
 
     const [users, setUsers] = useState([]);
     const [isLoading, setLoadingState] = useState([]);
-
+    //komentarz
 
     const deleteUser = (name) => {
         const filteredUsers = users.filter(user => user.name !== name)
