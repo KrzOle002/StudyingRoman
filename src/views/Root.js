@@ -3,9 +3,10 @@ import React from 'react'
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const Wraper = styled.div`
-  background-color: ${({ theme }) => theme.colors.lighGrey} ;
+  background-color: ${({ theme }) => theme.colors.grey} ;
   display: flex;
   justify-content: center ;
   align-items: center ;
@@ -15,12 +16,19 @@ const Wraper = styled.div`
 
 const Root = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wraper>
-        <UserList />
-      </Wraper>
-    </ThemeProvider >
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Wraper>
+          <Switch>
+            <Route path="/">
+              <UserList />
+            </Route>
+
+          </Switch>
+        </Wraper>
+      </ThemeProvider >
+    </Router>
   )
 }
 

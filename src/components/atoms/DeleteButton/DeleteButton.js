@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledButton } from "./Button.style";
+import { StyledButton } from "./DeleteButton.style";
 import { ReactComponent as DeleteIcon } from 'assets/icon/delete-icon.svg';
 
-const Button = (props) => {
+const DeleteButton = (props) => {
     return (
         <StyledButton {...props}>
             <DeleteIcon />
@@ -10,4 +10,4 @@ const Button = (props) => {
     )
 };
 
-export default Button;
+export default DeleteButton;
