@@ -1,32 +1,31 @@
-import UserList from 'components/organisms/UserList/UserList'
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import MainContainer from 'components/molecules/MainContainer/MainContainer';
+import Navbar from 'components/molecules/Navbar/Navbar';
+import UsersProvider from 'providers/UsersProviders';
+import { BrowserRouter as Router } from 'react-router-dom';
+import styled, { ThemeProvider } from 'styled-components';
 
-const Wraper = styled.div`
+const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.grey} ;
   display: flex;
-  justify-content: center ;
-  align-items: center ;
+  flex-direction: row;
   width: 100% ;
   height: 100vh;
 `;
 
 const Root = () => {
+
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Wraper>
-          <Switch>
-            <Route path="/">
-              <UserList />
-            </Route>
-
-          </Switch>
-        </Wraper>
+        <UsersProvider>
+          <Wrapper>
+            <Navbar />
+            <MainContainer />
+          </Wrapper>
+        </UsersProvider>
       </ThemeProvider >
     </Router>
   )
