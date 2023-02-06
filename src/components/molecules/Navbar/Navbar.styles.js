@@ -13,12 +13,11 @@ export const Wrapper = styled.div`
   z-index: 1;
 
 
-  .active > svg {
-    background-color: #daebea;
-    color: #242830;
+  .active  {
+    color: #666666;
     cursor: pointer;
-    border-radius: 14px;
   }
+
 
   a {
     color: white;

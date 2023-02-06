@@ -1,19 +1,20 @@
 import UserListItem from 'components/molecules/UserListItem/UserListItem';
-import { StyledList, Wraper } from './UserList.style';
+import { StyledList } from './UserList.style';
+import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
+import { useContext } from 'react';
+import { UsersContext } from 'providers/UsersProviders';
 
-
-
-const UserList = ({ deleteUser, users }) => {
-
+const UserList = () => {
+    const { users } = useContext(UsersContext)
     return (
         <>
-            <Wraper>
+            <ViewWrapper>
                 <StyledList>
                     {users.map((userData) => (
-                        <UserListItem deleteUser={deleteUser} userData={userData} key={userData.name} />
+                        <UserListItem userData={userData} key={userData.name} />
                     ))}
                 </StyledList>
-            </Wraper>
+            </ViewWrapper>
         </>
     )
 

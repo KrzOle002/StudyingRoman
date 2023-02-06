@@ -1,22 +1,22 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { NavSection, Wrapper } from './Navbar.styles'
 
 const Navbar = () => {
     return (
         <Wrapper>
             <NavSection>
-                <Link to="/" >
+                <NavLink to="/" exact >
                     Home Page
-                </Link>
-                <Link to="/add-users" >
+                </NavLink>
+                <NavLink to="/add-users" exact>
                     Add User
-                </Link>
-                <Link to="/settings" >
+                </NavLink>
+                <NavLink to="/settings" exact>
                     Settings
-                </Link>
-                <Link to="/logout" >
+                </NavLink>
+                <NavLink to="/logout" exact>
                     Logout
-                </Link>
+                </NavLink>
             </NavSection>
         </Wrapper>
     )
