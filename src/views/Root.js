@@ -1,31 +1,65 @@
-import UserList from 'components/organisms/UserList/UserList'
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { users as usersData } from 'data/users';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import styled, { ThemeProvider } from 'styled-components';
+import Navbar from 'components/molecules/Navbar/Navbar';
+import MainContainer from 'components/molecules/MainContainer/MainContainer';
 
 const Wraper = styled.div`
   background-color: ${({ theme }) => theme.colors.grey} ;
   display: flex;
-  justify-content: center ;
-  align-items: center ;
+  flex-direction: row;
   width: 100% ;
   height: 100vh;
 `;
 
+const initialFormState = {
+  name: '',
+  attendance: '',
+  average: '',
+};
 const Root = () => {
+  const [users, setUsers] = useState(usersData);
+  const [formValue, setFormValue] = useState(initialFormState);
+
+  useEffect(() => {
+    console.log("Hello Wiadomosc")
+  }, []);
+
+
+  const deleteUser = (name) => {
+    const filteredUsers = users.filter(user => user.name !== name)
+    setUsers(filteredUsers);
+  }
+
+  const handleInputChange = (e) => {
+    setFormValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+
+    });
+  };
+
+  const handleAddUser = (e) => {
+    e.preventDefault();
+    const newUser = {
+      name: formValue.name,
+      attendance: formValue.attendance,
+      average: formValue.average,
+    }
+
+    setUsers([newUser, ...users])
+    setFormValue(initialFormState)
+  };
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Wraper>
-          <Switch>
-            <Route path="/">
-              <UserList />
-            </Route>
-
-          </Switch>
+          <Navbar />
+          <MainContainer handleAddUser={handleAddUser} handleInputChange={handleInputChange} formValue={formValue} deleteUser={deleteUser} users={users} />
         </Wraper>
       </ThemeProvider >
     </Router>
