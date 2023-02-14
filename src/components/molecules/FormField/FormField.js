@@ -5,18 +5,16 @@ import { Wraper } from "./FormField.style";
 
 const FormField = ({ onChange, label, name, id, type = "text", ...props }) => {
   return (
-    <>
-      <Wraper>
-        <Label htmlFor={id}>{label}</Label>
-        <Input
-          name={name}
-          id={id}
-          type={type}
-          onChange={onChange}
-          data-testid={label}
-        ></Input>
-      </Wraper>
-    </>
+    <Wraper>
+      <Label htmlFor={id}>{label}</Label>
+      <Input
+        name={name}
+        id={id}
+        type={type}
+        onChange={onChange}
+        data-testid={label}
+      ></Input>
+    </Wraper>
   );
 };
 
