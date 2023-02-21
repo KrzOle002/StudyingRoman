@@ -1,7 +1,7 @@
 import { fireEvent, screen } from "@testing-library/react";
-import { renderWithProviders } from "helpers/renderWithThemeProvider";
-import UserList from "../UserList/UserList";
-import Form from "./Form";
+import { renderWithProviders } from "helpers/renderWithThemeProvider.js";
+import UserList from "../UserList/UserList.js";
+import Form from "./Form.js";
 
 describe("Form Field", () => {
   it("Renders the component", () => {
@@ -20,6 +20,7 @@ describe("Form Field", () => {
     fireEvent.change(screen.getByTestId("Average"), {
       target: { value: "4.5" },
     });
+    fireEvent.click(screen.getByRole("checkbox"));
     fireEvent.click(screen.getByText("Add"));
     screen.getByText("Grażyna");
   });

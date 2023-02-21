@@ -1,9 +1,9 @@
-import { AddButton } from "components/atoms/AddButton/AddButton";
-import { Title } from "components/atoms/Title/Title";
-import FormField from "components/molecules/FormField/FormField";
-import { ViewWrapper } from "components/molecules/ViewWrapper/ViewWrapper";
-import { useMicroForm } from "hooks/useMicroForm";
-import { UsersContext } from "providers/UsersProviders";
+import { AddButton } from "components/atoms/AddButton/AddButton.js";
+import { Title } from "components/atoms/Title/Title.js";
+import FormField from "components/molecules/FormField/FormField.js";
+import { ViewWrapper } from "components/molecules/ViewWrapper/ViewWrapper.js";
+import { useMicroForm } from "hooks/useMicroForm.js";
+import { UsersContext } from "providers/UsersProviders.js";
 import { useContext } from "react";
 const initialFormState = {
   name: "",

@@ -1,7 +1,7 @@
-import { Input } from "components/atoms/Input/Input";
-import { Label } from "components/atoms/Label/Label";
+import { Input } from "components/atoms/Input/Input.js";
+import { Label } from "components/atoms/Label/Label.js";
 import React from "react";
-import { Wraper } from "./FormField.style";
+import { Wraper } from "./FormField.style.js";
 
 const FormField = ({ onChange, label, name, id, type = "text", ...props }) => {
   return (
