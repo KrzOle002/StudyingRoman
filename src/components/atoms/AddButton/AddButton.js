@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const AddButton = styled.button`
-  padding: 4px 20px;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  padding: ${({ isBig }) => (isBig ? "10px 50px" : "4px 20px")};
+  font-size: ${({ isBig, theme: { fontSize } }) =>
+    isBig ? fontSize.m : fontSize.s};
   background-color: ${({ theme }) => theme.colors.lightPurple};
   border-radius: 20px;
   border: none;
@@ -10,7 +11,7 @@ export const AddButton = styled.button`
   color: ${({ theme }) => theme.colors.darkGrey};
   margin: 15px 0;
   :hover {
-    background-color: ${({ theme }) => theme.colors.success};
+    background-color: ${({ theme }) => theme.colors.darkPurple};
     cursor: pointer;
   }
 `;

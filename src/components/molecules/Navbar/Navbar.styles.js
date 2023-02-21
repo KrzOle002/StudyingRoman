@@ -1,34 +1,30 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   height: 100vh;
-  width: 140px;
   background-color: #242830;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: white;
-  
+
   z-index: 1;
 
-
-  .active  {
+  .active {
     color: #666666;
     cursor: pointer;
   }
-
 
   a {
     color: white;
     text-decoration: none;
   }
 
-  a:hover{
+  a:hover {
     color: #666666;
   }
 `;
-
 
 export const NavSection = styled.div`
   width: 100%;
