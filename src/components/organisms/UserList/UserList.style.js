@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledList = styled.ul`
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  height: 400px;
 `;

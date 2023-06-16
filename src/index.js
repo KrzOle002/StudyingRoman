@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Root from "./views/Root.js";
 import reportWebVitals from "./reportWebVitals.js";
+import { worker } from "mocks/browser.js";
 
+worker.start();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

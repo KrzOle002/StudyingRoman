@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { GlobalStyle } from "assets/styles/GlobalStyle.js";
 import { theme } from "assets/styles/theme.js";
 import MainContainer from "components/molecules/MainContainer/MainContainer.js";

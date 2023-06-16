@@ -21,7 +21,6 @@ export const query = `{
 
 const NewsSection = () => {
   const [articles, setArticles] = useState([]);
-  console.log(process.env.REACT_APP_NOT_SECRET_CODE);
   useEffect(() => {
     axios
       .post(
