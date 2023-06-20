@@ -1,0 +1,23 @@
+{
+  "background_color": "#ffffff",
+  "description": "Web site created using create-react-app",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "phenomenal-pavlova-54fd33.netlify",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "phenomenal-pavlova-54fd33.netlify",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/favicon.ico"
+    },
+    {
+      "src": "/logo192.png"
+    }
+  ],
+  "shortcuts": []
+}
