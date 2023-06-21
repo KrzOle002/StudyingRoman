@@ -5,8 +5,6 @@ import { ViewWrapper } from "components/molecules/ViewWrapper/ViewWrapper.js";
 import { useMicroForm } from "hooks/useMicroForm.js";
 import { UsersContext } from "providers/UsersProviders.js";
 import { useContext } from "react";
-import { useHistory } from "react-router-dom";
-
 const initialFormState = {
   name: "",
   attendance: "",
@@ -14,7 +12,6 @@ const initialFormState = {
 };
 
 const Form = () => {
-  const history = useHistory();
   const { handleAddUser } = useContext(UsersContext);
   const {
     formValue,
@@ -29,7 +26,6 @@ const Form = () => {
     if (formValue.consent) {
       handleAddUser(formValue);
       handleClearForm(initialFormState);
-      history.push("/");
     } else {
       handleThrowError("You need to give consent");
     }
