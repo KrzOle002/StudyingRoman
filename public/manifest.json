@@ -8,7 +8,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/logout",
+  "start_url": "https://phenomenal-pavlova-54fd33.netlify.app/logout",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
